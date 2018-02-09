@@ -23,14 +23,14 @@ int main() {
   //vertical lines connecting roof and ground
   draw_line(125, 250, 125, 100, s, c);
   draw_line(250, 250, 250, 100, s, c);
-  draw_line(350, 300, 350, 150, s, c);
+  draw_line(350, 300, 350, 165, s, c);
   //lines for ground
-  c.red = 90;
-  c.green = 40;
+  c.red = 160;
+  c.green = 100;
   c.blue = 30;
   draw_line(110, 100, 270, 100, s, c);
-  draw_line(250, 100, 350, 150, s, c);
-  draw_line(350, 150, 370, 150, s, c);
+  draw_line(250, 100, 350, 165, s, c);
+  draw_line(350, 165, 370, 165, s, c);
   //lines for roof
   c.red = MAX_COLOR;
   c.blue = 0;
