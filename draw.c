@@ -21,15 +21,15 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
       oct_1(x0, y0, x1, y1, s, c);
   }
   //slopes from more than 1 to undefined (kaboom)
-  else if (delta_y > delta_x && delta_x*delta_y >= 0) {
+  else if (delta_y >= delta_x && delta_x*delta_y >= 0) {
       oct_2(x0, y0, x1, y1, s, c);
   }
   //slopes from less than kaboom to -1
-  else if (delta_y > -1 * delta_x && delta_x*delta_y < 0) {
+  else if (delta_y >= -1 * delta_x && delta_x*delta_y < 0) {
       oct_3(x0, y0, x1, y1, s, c);
   }
   //slopes from less than -1 to more than 0
-  if (delta_y < -1 * delta_x && delta_x*delta_y < 0) {
+  if (delta_y <= -1 * delta_x && delta_x*delta_y < 0) {
     oct_4(x0, y0, x1, y1, s, c);
   }
 }
